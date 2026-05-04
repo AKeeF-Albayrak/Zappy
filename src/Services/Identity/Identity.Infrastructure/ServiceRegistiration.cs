@@ -4,6 +4,7 @@ using Identity.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SharedKernel.Repositories.Interface;
 
 namespace Identity.Infrastructure;
 
@@ -23,5 +24,7 @@ public static class ServiceRegistration
 
         services.AddScoped<IRefreshTokenReadRepository, RefreshTokenReadRepository>();
         services.AddScoped<IRefreshTokenWriteRepository, RefreshTokenWriteRepository>();
+
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 }
