@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Identity.Domain.Entities
 {
-    public class User_Devices : BaseEntity
+    public class UserDevice : BaseEntity
     {
         public Guid UserId { get; set; }
         public string DeviceId { get; set; }

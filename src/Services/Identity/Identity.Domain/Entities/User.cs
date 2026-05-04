@@ -13,7 +13,7 @@ namespace Identity.Domain.Entities
         public string PhoneNumber { get; set; }
         public bool IsActive { get; set; }
 
-        public List<Refresh_Token> Tokens { get; set; }
-        public List<User_Devices> Devices { get; set; }
+        public List<RefreshToken> Tokens { get; set; }
+        public List<UserDevices> Devices { get; set; }
     }
 }

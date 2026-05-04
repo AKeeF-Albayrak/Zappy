@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Identity.Domain.Entities
 {
-    public class Refresh_Token : BaseEntity
+    public class RefreshToken : BaseEntity
     {
         public Guid UserId { get; set; }
         public string Token { get; set; }
