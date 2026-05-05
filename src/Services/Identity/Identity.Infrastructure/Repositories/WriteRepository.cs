@@ -48,5 +48,10 @@ namespace Identity.Infrastructure.Repositories
         {
             Table.RemoveRange(entities);
         }
+
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
     }
 }

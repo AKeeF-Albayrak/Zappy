@@ -1,6 +1,8 @@
 ﻿using Identity.Application.Abstractions.Repositories;
+using Identity.Application.Abstractions.Services;
 using Identity.Infrastructure.Persistence.Context;
 using Identity.Infrastructure.Repositories;
+using Identity.Infrastructure.Security;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,5 +28,8 @@ public static class ServiceRegistration
         services.AddScoped<IRefreshTokenWriteRepository, RefreshTokenWriteRepository>();
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+        services.AddScoped<ITokenService, JwtTokenService>();
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
     }
 }

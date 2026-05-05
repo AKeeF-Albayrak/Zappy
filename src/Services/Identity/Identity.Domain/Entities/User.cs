@@ -14,6 +14,6 @@ namespace Identity.Domain.Entities
         public bool IsActive { get; set; }
 
         public List<RefreshToken> Tokens { get; set; }
-        public List<UserDevices> Devices { get; set; }
+        public List<UserDevice> Devices { get; set; }
     }
 }

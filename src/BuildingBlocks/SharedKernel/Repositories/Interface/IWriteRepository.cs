@@ -15,6 +15,6 @@ namespace SharedKernel.Repositories.Interface
 
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
-
+        Task<int> SaveChangesAsync();
     }
 }
