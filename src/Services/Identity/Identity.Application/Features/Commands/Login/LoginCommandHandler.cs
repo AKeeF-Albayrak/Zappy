@@ -15,7 +15,7 @@ namespace Identity.Application.Features.Commands.Login
         }
         public Task<LoginCommandResponse> Handle(LoginCommandRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
