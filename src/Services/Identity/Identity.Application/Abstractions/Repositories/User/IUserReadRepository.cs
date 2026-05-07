@@ -8,5 +8,6 @@ namespace Identity.Application.Abstractions.Repositories
 {
     public interface IUserReadRepository : IReadRepository<User>
     {
+        Task<User> GetUserByLoginConfAsync(string usernameOrEmail, string password, CancellationToken cancellationToken = default);
     }
 }

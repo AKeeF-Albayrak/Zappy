@@ -8,6 +8,9 @@ namespace Identity.Application.Features.Commands.Login
     {
         public string AccessToken { get; set; }
         public string RefreshToken { get; set; }
-        public string UserName { get; set; }
+        public Guid UserId { get; set; }
+        public string Message { get; set; }
+        public bool Succeeded { get; set; }
+        public string ErrorCode { get; set; }
     }
 }

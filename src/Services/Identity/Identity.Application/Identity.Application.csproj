@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Queries\" />
+    <Folder Include="Features\Commands\Logout\" />
+    <Folder Include="Features\Commands\RefreshToken\" />
+    <Folder Include="Features\Commands\Register\" />
+    <Folder Include="Features\Queries\GetCurrentUser\" />
   </ItemGroup>
 
   <ItemGroup>

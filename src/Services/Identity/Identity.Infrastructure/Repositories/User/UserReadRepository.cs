@@ -17,5 +17,10 @@ namespace Identity.Infrastructure.Repositories
         }
 
         public DbSet<User> Table => _context.Set<User>();
+
+        public async Task<User> GetUserByLoginConfAsync(string usernameOrEmail, string password, CancellationToken cancellationToken = default)
+        {
+            return await Table.FirstOrDefaultAsync(u => (u.Username == usernameOrEmail || u.Email == usernameOrEmail) && u.HashedPassword == password, cancellationToken);
+        }   
     }
 }
